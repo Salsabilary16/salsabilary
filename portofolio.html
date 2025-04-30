@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login & Portofolio | Tryamina Salsabila</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      padding-top: 70px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Form Login -->
+  <section id="login-section" class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <h2 class="text-center mb-3">Login</h2>
+        <form onsubmit="return login()">
+          <div class="mb-3">
+            <label for="username" class="form-label">Username:</label>
+            <input type="text" class="form-control" id="username" required />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" class="form-control" id="password" required />
+          </div>
+          <div id="login-error" class="text-danger mb-3" style="display: none;">Username atau password salah!</div>
+          <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portofolio -->
+  <div id="portfolio-section" style="display: none;">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Tryamina Salsabila</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- JUMBOTRON -->
+    <section class="jumbotron text-center" id="home">
+      <img src="bila.JPG" alt="Tryamina Salsabila" width="200" class="rounded-circle img-thumbnail" />
+      <h1 class="display-4">Tryamina Salsabila</h1>
+      <p class="lead">MAHASISWA</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="bg-light pb-5 pt-3">
+      <div class="container">
+        <div class="text-center mb-3"><h2>TENTANG SAYA</h2></div>
+        <div class="row justify-content-center fs-5 text-muted">
+          <div class="col-md-9">
+            <p>Halo semua perkenalkan nama saya Tryamina Salsabila, saya lahir di Surabaya pada tanggal 16 Mei 2005, saya anak bungsu dari 3 bersaudara, saya tinggal di Jalan Nyalabuh Permai Gang 2 No 12 Pamekasan, saya pernah bersekolah di SDN LAWANGAN DAYA 2 Pamekasan, SMPN 2 Pamekasan, SMAN 3 Pamekasan dan saat ini saya menjadi mahasiswa semester 4 di Universitas Madura Jurusan Teknik Program Studi Informatika.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="pb-5 pt-3">
+      <div class="container">
+        <div class="text-center mb-3"><h2>PENGALAMAN SAYA</h2></div>
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="proyek1.jpg" class="card-img-top" alt="project 1" />
+              <div class="card-body">
+                <p class="card-text">Bendahara 1 Geribra<br>SMAN 3 Pamekasan Tahun 2021 - 2022</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="proyek2.jpg" class="card-img-top" alt="project 2" />
+              <div class="card-body">
+                <p class="card-text">Anggota OSIS<br>SMAN 3 Pamekasan Tahun 2020 - 2022</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="proyek3.jpg" class="card-img-top" alt="project 3" />
+              <div class="card-body">
+                <p class="card-text">Anggota Paskibraka<br>Kabupaten Pamekasan Tahun 2021</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="pb-5 pt-3 bg-light">
+      <div class="container">
+        <div class="text-center mb-3"><h2>HUBUNGI SAYA</h2></div>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="name" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Pesan</label>
+                <textarea class="form-control" id="message" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Kirim</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-white text-center py-2">
+      <p>Created by <a href="https://www.instagram.com/salsabilary" class="text-white fw-bold">Tryamina Salsabila</a></p>
+    </footer>
+  </div>
+
+  <!-- Script -->
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      if (user === "tryamina" && pass === "12345") {
+        const loginSection = document.getElementById("login-section");
+        loginSection.parentNode.removeChild(loginSection); // Hapus form login
+        document.getElementById("portfolio-section").style.display = "block";
+        window.scrollTo(0, 0);
+      } else {
+        document.getElementById("login-error").style.display = "block";
+      }
+      return false;
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
